@@ -26,7 +26,7 @@ span {
 }
 
 .clicky-header h1 {
-    font-size: 5em;
+    font-size: 4em;
     font-weight: 700;
     padding: 15px;
 }
@@ -56,11 +56,12 @@ span {
 }
 
 .price-container div:last-child {
+    padding: 0;
     border: none;
 }
 
 .price-container h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
     padding-bottom: 15px;
     border-bottom: 1px solid #f0903d;
@@ -116,13 +117,71 @@ footer a {
     text-decoration: none;
     color: #f0903d;
 }
+@media (min-width: 1250px) and (max-width: 1650px) {
+    .clicky-header h1 {
+        font-size: 3em;
+    }
+    #infoContainer {
+        font-size: 0.6em;
+    }
+    .price-container div {
+        padding: 25px;
+    }
+    .price-container h3 {
+        font-size: 1em;
+    }
+    .price-container p {
+        font-size: 0.8em;
+    }
+    .clicky-toggles img {
+        width: 10%;
+    }
+}
 
-@media (min-width: 350px) and (max-width: 1650px) {
+@media (min-width: 800px) and (max-width: 1250px) {
+    .clicky-header h1 {
+        font-size: 2em;
+    }
+    #infoContainer {
+        font-size: 0.6em;
+    }
+    .price-container div {
+        padding: 10px;
+    }
+    .price-container h3 {
+        font-size: 0.8em;
+    }
+    .price-container p {
+        font-size: 0.6em;
+    }
+    .clicky-toggles img {
+        width: 10%;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 800px) {
+    .clicky-header h1 {
+        font-size: 2em;
+    }
+    #infoContainer {
+        font-size: 0.6em;
+    }
     .price-container {
         flex-direction: column;
     }
     .price-container div {
         border: none;
         border-bottom: 1px solid #2b282d;
+    }
+    .price-container h3 {
+        font-size: 0.8em;
+    }
+    .price-container p {
+        font-size: 0.6em;
+    }
+    .clicky-toggles img {
+        margin: 0;
+        margin-bottom: 50px;
+        width: 10%;
     }
 }
