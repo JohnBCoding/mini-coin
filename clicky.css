@@ -50,13 +50,12 @@ span {
 }
 
 .price-container div {
-    padding: 50px;
+    padding: 40px;
     border-right: 1px solid #2b282d;
     text-align: center;
 }
 
 .price-container div:last-child {
-    padding: 0;
     border: none;
 }
 
@@ -153,6 +152,7 @@ footer a {
     }
     .price-container p {
         font-size: 0.6em;
+        padding-top: 15px;
     }
     .clicky-toggles img {
         width: 10%;
@@ -170,14 +170,20 @@ footer a {
         flex-direction: column;
     }
     .price-container div {
+        padding: 10px;
         border: none;
         border-bottom: 1px solid #2b282d;
+    }
+    .price-container div:last-child {
+        padding: 0;
+        padding-top: 10px;
     }
     .price-container h3 {
         font-size: 0.8em;
     }
     .price-container p {
         font-size: 0.6em;
+        padding-top: 15px;
     }
     .clicky-toggles img {
         margin: 0;
