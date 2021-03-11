@@ -1,0 +1,128 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #211f29;
+    color: #bbcaab;
+    font-family: "Space Mono", monospace;
+}
+
+main {
+    flex-grow: 1;
+}
+
+span {
+    color: #bbcaab;
+}
+
+.clicky-header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.clicky-header h1 {
+    font-size: 5em;
+    font-weight: 700;
+    padding: 15px;
+}
+
+#infoContainer {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: #f0903d;
+}
+
+#infoContainer p {
+    display: inline;
+    margin-right: 15px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+}
+
+.price-container div {
+    padding: 50px;
+    border-right: 1px solid #2b282d;
+    text-align: center;
+}
+
+.price-container div:last-child {
+    border: none;
+}
+
+.price-container h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0903d;
+}
+
+.price-container p {
+    padding-top: 25px;
+}
+
+.clicky-toggles {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.clicky-toggles img {
+    max-width: 100%;
+    background: none;
+    background-clip: content-box;
+    border: none;
+    border-radius: 75%;
+    padding: 5px;
+    margin: 25px 10px;
+    transition: opacity 0.4s ease-out, background-color 0.2s ease-in-out;
+}
+
+.clicky-toggles img:hover {
+    cursor: pointer;
+    background-color: #f0903d;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.price-up {
+    color: #5aa592;
+}
+
+.price-down {
+    color: #c84b25;
+}
+
+footer {
+    padding-bottom: 15px;
+}
+
+footer a:first-child {
+    padding-right: 50px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #f0903d;
+}
+
+@media (min-width: 350px) and (max-width: 1650px) {
+    .price-container {
+        flex-direction: column;
+    }
+    .price-container div {
+        border: none;
+        border-bottom: 1px solid #2b282d;
+    }
+}

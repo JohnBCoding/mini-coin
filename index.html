@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mini Coin: Another Crypto Tracker</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="clicky.css" />
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <main>
+            <section class="container">
+                <div class="clicky-header">
+                    <h1 id="coinHeader">Bitcoin</h1>
+                    <div id="infoContainer">
+                        <p>Updated: <span id="time"></span></p>
+                        <p>Currency: <span id="currency"></span></p>
+                        <p>Total 24/h Volume: <span id="volume"></span></p>
+                        <p>Change 1/h: <span id="change"></span></p>
+                    </div>
+                    <div class="price-container"></div>
+                </div>
+                <div class="clicky-toggles">
+                    <img src="icons/white/btc.png" alt="BITCOIN" id="coinBtn" />
+                    <img src="icons/white/usd.png" alt="USD" id="currencyBtn" />
+                </div>
+            </section>
+        </main>
+        <footer>
+            <span>
+                Created By:
+                <a href="https://github.com/JohnBCoding">John Bullard</a>
+                Using:
+                <a href="https://www.cryptonator.com/api/">Cryptonator API</a>
+                and
+                <a href="http://cryptoicons.co/">Cryptoicons</a></span
+            >
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
