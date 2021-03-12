@@ -1,3 +1,5 @@
+// Set our coin/currency options
+// Could pull this from the API but would require 400+ icons...
 const coins = [
     {
         Bitcoin: {
@@ -142,7 +144,7 @@ for (let key of Object.keys(buttons)) {
             buttons[key].current = 0;
         }
 
-        // Add event listener on click to handle opacity transition.
+        // Add event listener on click to handle opacity transitions.
         button.addEventListener("transitionend", function fadeInOut(evt) {
             if (!evt.propertyName === "opacity") return;
 
@@ -151,8 +153,11 @@ for (let key of Object.keys(buttons)) {
                 priceContainer.classList.toggle("transparent");
             }
             updateCoin();
+
+            // Remove listener so it only triggers once(transitionend calls mutliple times in a transition)
             button.removeEventListener("transitionend", fadeInOut);
         });
+
         button.classList.toggle("transparent");
         priceContainer.classList.toggle("transparent");
     });
@@ -183,11 +188,12 @@ async function updateCoin() {
         updateData(res.data);
     } catch (err) {
         console.log(err);
+        coinHeader.innerText = "Error When Pulling Data";
     }
 }
 
 function updateData(data) {
-    // Update the header info.
+    // Update the header info
     let newDate = new Date(data.timestamp * 1000);
     timeHeader.innerText = newDate.toLocaleString();
     currencyHeader.innerText = data.ticker.target;
@@ -225,6 +231,6 @@ function updateData(data) {
     }
 }
 
-// Start
+// Start and update every min
 updateCoin();
 setInterval(updateCoin, 60000);

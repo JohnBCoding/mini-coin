@@ -47,6 +47,7 @@ span {
     flex-direction: row;
     justify-content: center;
     padding: 25px;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .price-container div {
@@ -82,7 +83,7 @@ span {
     background: none;
     background-clip: content-box;
     border: none;
-    border-radius: 75%;
+    border-radius: 20%;
     padding: 5px;
     margin: 25px 10px;
     filter: invert(74%) sepia(20%) saturate(256%) hue-rotate(47deg)
@@ -92,8 +93,7 @@ span {
 
 .clicky-toggles img:hover {
     cursor: pointer;
-    filter: none;
-    background-color: #f0903d;
+    background-color: black;
 }
 
 .transparent {
@@ -120,6 +120,7 @@ footer a {
     text-decoration: none;
     color: #f0903d;
 }
+
 @media (min-width: 1250px) and (max-width: 1650px) {
     .clicky-header h1 {
         font-size: 3em;
