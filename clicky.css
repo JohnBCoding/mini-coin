@@ -165,7 +165,7 @@ footer a {
     }
 }
 
-@media (min-width: 350px) and (max-width: 800px) {
+@media (max-width: 800px) {
     .clicky-header h1 {
         font-size: 2em;
     }
@@ -176,6 +176,7 @@ footer a {
         flex-direction: column;
     }
     .price-container div {
+        margin-bottom: 15px;
         padding: 10px;
         border: none;
         border-bottom: 1px solid #2b282d;
@@ -195,5 +196,11 @@ footer a {
         margin: 0;
         margin-bottom: 50px;
         width: 50px;
+    }
+    footer {
+        font-size: 0.5em;
+    }
+    footer a:first-child {
+        padding-right: 25px;
     }
 }
