@@ -78,17 +78,21 @@ span {
 
 .clicky-toggles img {
     max-width: 100%;
+    width: 75px;
     background: none;
     background-clip: content-box;
     border: none;
     border-radius: 75%;
     padding: 5px;
     margin: 25px 10px;
+    filter: invert(74%) sepia(20%) saturate(256%) hue-rotate(47deg)
+        brightness(106%) contrast(85%);
     transition: opacity 0.4s ease-out, background-color 0.2s ease-in-out;
 }
 
 .clicky-toggles img:hover {
     cursor: pointer;
+    filter: none;
     background-color: #f0903d;
 }
 
@@ -133,7 +137,8 @@ footer a {
         font-size: 0.8em;
     }
     .clicky-toggles img {
-        width: 10%;
+        width: 75px;
+        flex-shrink: none;
     }
 }
 
@@ -155,7 +160,7 @@ footer a {
         padding-top: 15px;
     }
     .clicky-toggles img {
-        width: 10%;
+        width: 50px;
     }
 }
 
@@ -188,6 +193,6 @@ footer a {
     .clicky-toggles img {
         margin: 0;
         margin-bottom: 50px;
-        width: 10%;
+        width: 50px;
     }
 }

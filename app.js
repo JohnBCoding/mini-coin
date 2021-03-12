@@ -20,6 +20,62 @@ const coins = [
             alt: "Binance",
         },
     },
+    {
+        Litecoin: {
+            short: "LTC",
+            icon: "icons/white/ltc.png",
+            alt: "Litecoin",
+        },
+    },
+    {
+        Cardano: {
+            short: "ADA",
+            icon: "icons/white/ada.png",
+            alt: "Cardano",
+        },
+    },
+    {
+        Polkadot: {
+            short: "DOT",
+            icon: "icons/white/dot.png",
+            alt: "Polkadot",
+        },
+    },
+    {
+        "Bitcoin Cash": {
+            short: "BCH",
+            icon: "icons/white/bch.png",
+            alt: "Bitcoin Cash",
+        },
+    },
+    {
+        Steller: {
+            short: "XLM",
+            icon: "icons/white/xlm.png",
+            alt: "Steller",
+        },
+    },
+    {
+        Tether: {
+            short: "USDT",
+            icon: "icons/white/usdt.png",
+            alt: "Tether",
+        },
+    },
+    {
+        Monero: {
+            short: "XMR",
+            icon: "icons/white/xmr.png",
+            alt: "Monero",
+        },
+    },
+    {
+        Dogecoin: {
+            short: "DOGE",
+            icon: "icons/white/doge.png",
+            alt: "Dogecoin",
+        },
+    },
 ];
 
 const currency = [
@@ -36,7 +92,7 @@ const currency = [
         },
     },
     {
-        Euro: {
+        EURO: {
             short: "EUR",
             icon: "icons/white/eur.png",
         },
@@ -155,12 +211,14 @@ function updateData(data) {
         // Change color of the text depending on the market change
         if (data.ticker.change > 0) {
             newPrice.classList.add("price-up");
-
             newPrice.classList.remove("price-down");
+            changeHeader.classList.add("price-up");
+            changeHeader.classList.remove("price-down");
         } else {
             newPrice.classList.add("price-down");
             newPrice.classList.remove("price-up");
             changeHeader.classList.add("price-down");
+            changeHeader.classList.remove("price-up");
         }
         newDiv.append(newMarket, newPrice, newVolumne);
         priceContainer.append(newDiv);
